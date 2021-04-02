@@ -1,9 +1,12 @@
 ## Inertial-based Activity Recognition with Transformers 
 This repository gives the official PyTorch implementation of the IMU-CNN and IMU-Transformer models from the paper: "Boosting Inertial-based Human Activity Recognition with Transformers" (Shavit and Klein, 2021, IEEE Open Access). 
-We propose general framework for inertial-based activity recognition with Transformers. Samples collected over time with inertial sensors on mobile devices are provided to a Transformer Encoder architecture for learning smartphone location recognition and human activity recognition tasks. The proposed approach is the first to employ Transformers for this task and is shown to provide a consistent improvement, across multiple datasets and scenarios.  
+
+We propose general framework for inertial-based activity recognition with Transformers. 
+Samples collected over time with inertial sensors on mobile devices are provided to a Transformer Encoder architecture for learning smartphone location recognition and human activity recognition tasks. The proposed approach is the first to employ Transformers for this task and is shown to provide a consistent improvement, across multiple datasets and scenarios.  
 ![Inertial-based Activity Recognition with Transformers ](./img/ga_1.PNG)
 Our model architecture (IMU-Transformer) is shown below:
-![IMU-Transformer](./img/ga_2.PNG)
+![IMU-Transformer](./img/ga_2.PNG
+)
 
 ### Training and Testing for Intertial-based Activity Recognition
 This repository supports the training and testing of deep learning models for intertial-based activity recognition.
