@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+
+    "formatters": {
+        "screen": {
+            "format": "[%(asctime)s] [%(levelname)s] [%(filename)s():%(lineno)s] - %(message)s",
+            "datefmt": "%d-%m-%y %H:%M"
+        },
+        "full":
+        {
+            "format": "[%(asctime)s] [%(levelname)s] - %(message)s",
+            "datefmt": "%d-%m-%y %H:%M"
+        }
+    },
+    "handlers": {
+        "screen_handler": {
+            "level": "INFO",
+            "formatter": "screen",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout"
+        },
+        "file_handler": {
+            "level": "DEBUG",
+            "formatter": "full",
+            "class": "logging.FileHandler",
+            "filename": "run",
+            "mode": "w"
+        }
+    },
+    "loggers": {
+        "": {
+            "handlers": ["file_handler","screen_handler"],
+            "level": "DEBUG",
+            "propagate": false
+        }
+    }
+}
+
