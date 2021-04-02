@@ -1,7 +1,7 @@
 ## Inertial-based Activity Recognition with Transformers 
 This repository provide the official PyTorch implementation of the method described in the paper: **"Boosting Inertial-based Human Activity Recognition with Transformers"** (Shavit and Klein, 2021, IEEE Open Access). 
 
-We propose general framework for inertial-based activity recognition with Transformers. 
+We propose a general framework for inertial-based activity recognition with Transformers. 
 Samples collected over time with inertial sensors on mobile devices are provided to a Transformer Encoder architecture for learning smartphone location recognition (SLR) and human activity recognition (HAR) tasks. 
 
 The proposed approach is the first to employ Transformers for this task and is shown to provide a consistent improvement, across multiple datasets and scenarios.  
@@ -12,10 +12,10 @@ Our model architecture (IMU-Transformer) is shown below:
 )
 
 ### Training and Testing for Intertial-based Activity Recognition
-This repository supports the training and testing of deep learning models for intertial-based activity recognition.
-Specifically these models take IMU data and classify the activity class. 
+This repository supports training and testing of deep learning models for inertial-based activity recognition.
+Specifically, these models take IMU data and classify the type of activity. 
 We support two models: 
-- A Transformer-based classifier (IMU-Transformer). This is our proposed architecture, described in out paper
+- A Transformer-based classifier (IMU-Transformer)
 - A CNN-based (IMU-CNN) classifier, provided for comparison purposes
 
 The entry point to our framework is the script ```main.py```
@@ -27,15 +27,16 @@ In order to train a model run:
 main.py train <path to labels file> 
 ```
 During training, the models and log file will be saved to a dedicated output folder (created if does not exist)
+
 In order to test a trained model:
 ```
 main.py train <path to imu dataset .csv file> --checkpoint_path <path to your model>
 ```
-In order to see the full options:
+To see the full options, run:
 ```
 main.py -h
 ```
-The different hyperparameters, including whether to run the Transformer/CNN architectures are controlled by 
+The different hyper-parameters, including whether to run the Transformer/CNN architectures are controlled by 
 the configuration file (```config.json```)
 
 ### Configuration Parameters
@@ -43,9 +44,9 @@ Parameter Name | Description |
 --- | --- |
 n_freq_print|How often to print the loss to the log file
 n_freq_checkpoint|How often to save a checkpoint
-n_workers|Number of works
+n_workers|Number of workers
 device_id|The identifier of the torch device (e.g., cuda:0)
-input_dim|The dimension of the input IMU data, e.g. 6 when using accelerometers and gyros
+input_dim|The dimension of the input IMU data, e.g., 6 when using accelerometers and gyros
 window_size|The size of the time window (i.e. how many samples in a window)
 num_classes|Number of classes
 window_shift|The window shift, put here the window_size to avoid window overlap
