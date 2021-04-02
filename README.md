@@ -20,6 +20,7 @@ In order to train a model run:
 ```
 main.py train <path to labels file> 
 ```
+During training, the models and log file will be saved to a dedicated output folder (created if does not exist)
 In order to test a trained model:
 ```
 main.py train <path to imu dataset .csv file> --checkpoint_path <path to your model>
