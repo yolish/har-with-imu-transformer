@@ -8,7 +8,6 @@ import json
 import logging
 from util import utils
 from os.path import join
-from models.IMUTransformer import IMUTransformer
 from models.IMUTransformerEncoder import IMUTransformerEncoder
 from models.IMUCLSBaseline import IMUCLSBaseline
 from util.IMUDataset import IMUDataset
@@ -82,7 +81,7 @@ if __name__ == "__main__":
         window_size = config.get("window_size")
         input_size = config.get("input_dim")
 
-        dataset = IMUDataset(args.imu_dataset_file, window_size, task_type, input_size, window_shift)
+        dataset = IMUDataset(args.imu_dataset_file, window_size, input_size, window_shift)
         loader_params = {'batch_size': config.get('batch_size'),
                                   'shuffle': True,
                                   'num_workers': config.get('n_workers')}
@@ -155,7 +154,7 @@ if __name__ == "__main__":
         window_shift = config.get("window_shift")
         window_size = config.get("window_size")
         input_size = config.get("input_dim")
-        dataset = IMUDataset(args.imu_dataset_file, window_size, task_type, input_size,
+        dataset = IMUDataset(args.imu_dataset_file, window_size, input_size,
                              window_shift)
         loader_params = {'batch_size': 1,
                          'shuffle': False,
