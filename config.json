@@ -6,9 +6,9 @@
 	
 	"task_type": "seq-to-one",
 	"input_dim": 6,
-	"window_size":100,
-	"num_classes":2,
-    "window_shift": 100,
+	"window_size":50,
+	"num_classes":6,
+    "window_shift": 50,
 	"use_baseline": false,
 	
 	"encode_position":true,
@@ -26,7 +26,7 @@
 	"lr": 1e-4,
 	"weight_decay":1e-04,
 	"eps": 1e-10,
-	"lr_scheduler_step_size": 3,
+	"lr_scheduler_step_size": 5,
 	"lr_scheduler_gamma": 0.5,
-	"n_epochs": 8
+	"n_epochs": 30
 }
